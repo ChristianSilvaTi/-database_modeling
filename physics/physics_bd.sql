@@ -36,13 +36,13 @@ CREATE TABLE APPOINTMENT (
     reason VARCHAR(255) NOT NULL,
     status VARCHAR(20) NOT NULL
         CHECK (status IN ('Scheduled', 'Completed', 'Cancelled')),
-    id_doctor INT NOT NULL,
-    id_patient INT NOT NULL,
+    doctor_id INT NOT NULL,
+    patient_id INT NOT NULL,
 
-    FOREIGN KEY (id_doctor)
+    FOREIGN KEY (doctor_id)
         REFERENCES DOCTOR(doctor_id),
 
-    FOREIGN KEY (id_patient)
+    FOREIGN KEY (patient_id)
         REFERENCES PATIENT(patient_id)
 );
 
@@ -51,8 +51,8 @@ CREATE TABLE PRESCRIPTION (
     medication VARCHAR(100) NOT NULL,
     dosage VARCHAR(100) NOT NULL,
     treatment_duration VARCHAR(50) NOT NULL,
-    id_appointment INT NOT NULL,
+    appointment_id INT NOT NULL,
 
-    FOREIGN KEY (id_appointment)
+    FOREIGN KEY (appointment_id)
         REFERENCES APPOINTMENT(appointment_id)
 );
