@@ -1,0 +1,18 @@
+A medical clinic wants to develop a database system to manage its patients, doctors, and appointments.
+
+The clinic employs several doctors, each specializing in a specific field. A doctor can attend to multiple patients, and a patient can schedule appointments with different doctors.
+
+Each appointment must record:
+Date
+Time
+Reason for the visit
+Appointment status (Scheduled, Completed, Canceled)
+
+A patient can have multiple phone numbers, and each phone number must be stored separately.
+
+The clinic also wants to maintain a registry of its medical specialties. A specialty can be associated with multiple doctors, but each doctor has only one primary specialty.
+
+Additionally, after a completed appointment, the doctor may issue a prescription for the patient. An appointment can have zero or multiple prescriptions, and each prescription must store:
+Medication name
+Dosage
+Duration of the treatment
